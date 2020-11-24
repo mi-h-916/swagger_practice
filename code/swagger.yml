@@ -1,1 +1,32 @@
+swagger: "2.0"
+info:
+  description: "これは初投稿練習です。"
+  version: "1.0.0"
+  title: "Practice API"
+  termsOfService: "利用規約です。"
+  contact:
+    email: "abcExample@com"
 
+paths:
+  /path/{pathId}:
+  get:
+    summary: "練習1"
+    description: "pathIdにおけるpathを返却します。"
+    parameters:
+    - name: "pathId"
+      in: "path"
+      description: "pathのId"
+      required: true
+      type: string
+    responses:
+      200:
+        description: "成功時レスポンス"
+        schema:
+          type: "object"
+          properties:
+            id:
+              type: "integer"
+              format: int64
+            name:
+              type: "string"
+              example: "doggie"
